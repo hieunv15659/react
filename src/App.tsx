@@ -5,6 +5,7 @@ import Product from "./components/product";
 import ProductEdit from "./components/product-edit";
 import LayoutAdmin from "./layouts/LayoutAdmin";
 import LayoutWebsite from "./layouts/LayoutWebsite";
+import App from "../src/app/app";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/admin" element={<LayoutAdmin />}>
                     <Route index element={<h1>Dashboard</h1>} />
                     <Route path="products" element={<Product />} />
+                    <Route path="app" element={<App />} />
                     <Route path="products/add" element={<h1>Product Add</h1>} />
                     <Route path="products/:id/edit" element={<ProductEdit />} />
                 </Route>
